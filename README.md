@@ -1,6 +1,6 @@
 # dotup_flutter_themed
 
-Dart package that generates a header for each dart file.
+Easy Flutter themes - Extend your themes with custom theme data
 
 ## Easy usage
 

@@ -8,4 +8,8 @@
 
 ## 1.0.2
 
-* Nex: theme_demo_easy
+* New: theme_demo_easy
+
+## 1.0.3
+
+* Fix: Readme
