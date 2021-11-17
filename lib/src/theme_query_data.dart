@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ThemeQueryData<T> extends ValueNotifier<ThemeMode> {
+class ThemeQueryData extends ValueNotifier<ThemeMode> {
   ThemeQueryData({
     required this.dark,
     required this.light,
