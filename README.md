@@ -1,3 +1,5 @@
+![flutter](https://badgen.net/pub/flutter-platform/xml) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![forks](https://badgen.net/github/forks/dotupNET/dotup_flutter_themed/) ![stars](https://badgen.net/github/stars/dotupNET/dotup_flutter_themed/)
+
 # dotup_flutter_themed
 
 Easy Flutter themes - Extend your themes with custom theme data
