@@ -13,3 +13,7 @@
 ## 1.0.3
 
 * Fix: Readme
+
+## 2.0.0
+
+* New: ThemeQueryData can change colors

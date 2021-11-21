@@ -11,16 +11,13 @@ class ThemedApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ThemeBuilder(
-      data: ThemeQueryData(
-        dark: ThemeData.dark(),
-        light: ThemeData.light(),
-      ),
-      builder: (dark, light, themeMode) {
+      data: ThemeQueryData.standard(),
+      builder: (theme) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          darkTheme: dark,
-          theme: light,
-          themeMode: themeMode,
+          darkTheme: theme.darkTheme, // ThemeQuery.of(context).dark,
+          theme: theme.lightTheme,
+          themeMode: theme.themeMode,
           home: const ThemedHome(),
         );
       },

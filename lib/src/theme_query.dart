@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'theme_query_data.dart';
+
 /// Establishes a subtree in which Theme queries resolve to the given data.
 ///
 /// For example, to learn the size of the current Theme (e.g., the window
@@ -19,7 +21,7 @@ import 'package:flutter/material.dart';
 /// See also:
 ///
 ///  * [ThemeQueryData], the data structure that represents the metrics.
-class ThemeQuery<T> extends InheritedWidget {
+class ThemeQuery<T extends ThemeQueryData> extends InheritedWidget {
   /// Creates a widget that provides [ThemeQueryData] to its descendants.
   ///
   /// The [data] and [child] arguments must not be null.
@@ -73,7 +75,7 @@ class ThemeQuery<T> extends InheritedWidget {
   ///
   ///  * [maybeOf], which doesn't throw or assert if it doesn't find a
   ///    [ThemeQuery] ancestor, it returns null instead.
-  static T of<T>(BuildContext context) {
+  static T of<T extends ThemeQueryData>(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<ThemeQuery<T>>()!.data;
   }
 
@@ -104,20 +106,20 @@ class ThemeQuery<T> extends InheritedWidget {
   ///
   ///  * [of], which will throw if it doesn't find a [ThemeQuery] ancestor,
   ///    instead of returning null.
-  static T? maybeOf<T>(BuildContext context) {
+  static T? maybeOf<T extends ThemeQueryData>(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<ThemeQuery<T>>()?.data;
   }
 
   /// Returns isDesktop for the nearest ThemeQuery ancestor or [ThemeType.unknown], if
   /// no such ancestor exists.
-  static ThemeData? dark<T>(BuildContext context) {
-    return ThemeQuery.maybeOf(context)?.dark;
+  static ThemeData? dark<T extends ThemeQueryData>(BuildContext context) {
+    return ThemeQuery.maybeOf(context)?.darkTheme;
   }
 
   /// Returns isDesktop for the nearest ThemeQuery ancestor or [ThemeType.unknown], if
   /// no such ancestor exists.
-  static ThemeData? light<T>(BuildContext context) {
-    return ThemeQuery.maybeOf(context)?.light;
+  static ThemeData? light<T extends ThemeQueryData>(BuildContext context) {
+    return ThemeQuery.maybeOf(context)?.lightTheme;
   }
 
   // static T current<T>(BuildContext context) {

@@ -9,7 +9,7 @@ class CustomThemeQueryData<T> extends ThemeQueryData {
     required this.darkCustom,
     required this.lightCustom,
     ThemeMode themeMode = ThemeMode.dark,
-  }) : super(dark: dark, light: light, themeMode: themeMode);
+  }) : super(darkTheme: dark, lightTheme: light, themeMode: themeMode);
 
   final T darkCustom;
   final T lightCustom;
