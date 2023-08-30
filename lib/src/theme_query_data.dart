@@ -72,20 +72,6 @@ class ThemeQueryData extends ChangeNotifier {
     notifyListeners();
   }
 
-  @Deprecated(
-    'No longer used by the framework, please remove any reference to it. '
-    'For more information, consult the migration guide at '
-    'https://flutter.dev/docs/release/breaking-changes/theme-data-accent-properties#migration-guide. '
-    'Use [changeSecondaryColor] instead.',
-  )
-  void changeAccentColor(Color? color) {
-    final newDarkTheme = _darkTheme.copyWith(accentColor: color);
-    final newLightTheme = _lightTheme.copyWith(accentColor: color);
-    _darkTheme = newDarkTheme;
-    _lightTheme = newLightTheme;
-    notifyListeners();
-  }
-
   void changeSecondaryColor(Color? color) {
     final newDarkTheme = _darkTheme.copyWith(colorScheme: _darkTheme.colorScheme.copyWith(secondary: color));
     final newLightTheme = _lightTheme.copyWith(colorScheme: _lightTheme.colorScheme.copyWith(secondary: color));

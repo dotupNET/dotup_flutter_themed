@@ -43,9 +43,9 @@ class ThemedHome extends StatelessWidget {
               icon: const Icon(Icons.dark_mode)),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Column(
-          children: const [
+          children: [
             Text('Nice!'),
             Text('https://flutter-apps.ml'),
           ],

@@ -75,9 +75,9 @@ class ThemedHome extends StatelessWidget {
               )),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Column(
-          children: const [
+          children: [
             Text('Nice!'),
             Text('https://flutter-apps.ml'),
           ],
