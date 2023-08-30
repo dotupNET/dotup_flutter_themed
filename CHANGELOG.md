@@ -17,3 +17,7 @@
 ## 2.0.0
 
 * New: ThemeQueryData can change colors
+
+## 3.0.0
+
+* Package upgrade
